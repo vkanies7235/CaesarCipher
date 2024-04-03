@@ -1,7 +1,7 @@
 
 result = ""
 
-alphabet = [ " ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "m", "l",
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
            "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 
@@ -38,10 +38,9 @@ def convert_to_number(user_input):
         return x
 
 
-
 user_input = input("How many times would you like the letters shifted? ")
 num = convert_to_number(user_input)
-sentence = input("Your sentence (all lower-case): ")
+sentence = input("Your sentence (can include punctuation, capitalized letters, etc): ")
 map = create_map(num)
 result = map_text(sentence, map)
 print("Here is the encrypted sentence: {}".format(result))
