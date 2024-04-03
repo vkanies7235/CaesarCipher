@@ -5,7 +5,7 @@ result = ""
 
 
 def shiftmiddle():
-    for [x] in sentence:
+    for x in sentence:
         if sentence[x] == "a":
             middle.append(1)
         elif sentence[x] == "b":
