@@ -1,7 +1,7 @@
 num = int(input("How many times would you like the code shifted? "))
 sentence = input("Your sentence (all lower-case): ")
 middle = []
-result = "ex"
+result = ""
 
 
 def shiftmiddle():
@@ -60,6 +60,7 @@ def shiftmiddle():
             middle.append(26)
         elif sentence[x] == " ":
             middle.append(0)
+    return middle
 
 
 
@@ -71,7 +72,63 @@ def shiftend():
                 if middle[x] == 27:
                     middle[x] = 1
     for [z] in middle:
-        if middle[z] == 1:
-            result[0] = "a"
-        if middle[z] == 1:
-            result[1] = "b"
+        if middle[z] == 0:
+            result[z] = " "
+        elif middle[z] == 1:
+            result[z] = "a"
+        elif middle[z] == 2:
+            result[z] = "b"
+        elif middle[z] == 3:
+            result[z] = "c"
+        elif middle[z] == 4:
+            result[z] = "d"
+        elif middle[z] == 5:
+            result[z] = "e"
+        elif middle[z] == 6:
+            result[z] = "f"
+        elif middle[z] == 7:
+            result[z] = "g"
+        elif middle[z] == 8:
+            result[z] = "h"
+        elif middle[z] == 9:
+            result[z] = "i"
+        elif middle[z] == 10:
+            result[z] = "j"
+        elif middle[z] == 11:
+            result[z] = "k"
+        elif middle[z] == 12:
+            result[z] = "l"
+        elif middle[z] == 13:
+            result[z] = "m"
+        elif middle[z] == 14:
+            result[z] = "n"
+        elif middle[z] == 15:
+            result[z] = "o"
+        elif middle[z] == 16:
+            result[z] = "p"
+        elif middle[z] == 17:
+            result[z] = "q"
+        elif middle[z] == 18:
+            result[z] = "r"
+        elif middle[z] == 19:
+            result[z] = "s"
+        elif middle[z] == 20:
+            result[z] = "t"
+        elif middle[z] == 21:
+            result[z] = "u"
+        elif middle[z] == 22:
+            result[z] = "v"
+        elif middle[z] == 23:
+            result[z] = "w"
+        elif middle[z] == 24:
+            result[z] = "x"
+        elif middle[z] == 25:
+            result[z] = "y"
+        elif middle[z] == 26:
+            result[z] = "z"
+    return result
+
+
+middle = shiftmiddle()
+result = shiftend()
+print("Here is the encrypted sentence: {}".format(result))
