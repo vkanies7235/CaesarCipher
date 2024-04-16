@@ -1,7 +1,11 @@
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
            "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 common_words = ["the", "be", "to", "of", "and", "in", "for", "that", "have",
-                "it", "not", "on", "with", "he", "she", "they", "you", "as", "this"]
+                "it", "not", "on", "with", "he", "she", "they", "you", "as", "this", "their",
+                "be", "and", "do", "will", "from", "out", "up", "about", "get", "my", "but",
+                "by", "would", "go", "me", "just", "some", "could", "then", "than", "people",
+                "see", "after", "two", "one", "want", "because", "well", "first", "second"
+                ]
 
 
 def create_map():
@@ -36,7 +40,9 @@ def check_input(check, common_words):
 map = create_map()
 user_input = input("Enter your encrypted sentence: ")
 found = 0
-while found == 0:
+for y in range(26):
     check = map_text(user_input, map)
-    found = check_input
+    found = check_input(check, common_words)
+    if found == 1:
+        break
 print("Here is your decrypted sentence: {}".format(check))
